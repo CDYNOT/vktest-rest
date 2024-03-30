@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <title>Тест API - Новиков Антон Олегович @CDYNOT</title>
+
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+<div class="wrap">
+    <div class="cont">
+        <div class="api">
+            <div class="block_title">Демонстрация работы простого API сервиса</div>
+
+            <div class="box flex">
+
+                <div class="data">
+                    <div class="controls flex" id="controls">
+                        <div class="loading"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+                        <div class="post">
+                            <div class="subtitle">Проверка /register</div>
+
+                            <form class="form" id="register">
+                                <div class="line">
+                                    <label for="email">Введите email</label>
+                                    <div class="field">
+                                        <input type="email" class="input" name="email" id="email" value="" placeholder="email@domain.ru">
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <label for="password">Введите пароль</label>
+                                    <div class="field">
+                                        <input type="text" class="input" name="password" id="password" value="" placeholder="qwerty123!">
+                                    </div>
+                                </div>
+
+                                <div class="submit flex">
+                                    <button type="button" class="submit_btn register" onclick="register()">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="post">
+                            <div class="subtitle">Проверка /authorize</div>
+
+                            <form class="form" id="authorize">
+                                <div class="line">
+                                    <label for="email2">Введите email</label>
+                                    <div class="field">
+                                        <input type="email" class="input" name="email" id="email2" value="" placeholder="email@domain.ru">
+                                    </div>
+                                </div>
+
+                                <div class="line">
+                                    <label for="password2">Введите пароль</label>
+                                    <div class="field">
+                                        <input type="text" class="input" name="password" id="password2" value="" placeholder="qwerty123!">
+                                    </div>
+                                </div>
+
+                                <div class="submit flex">
+                                    <button type="button" class="submit_btn register" onclick="authorize()">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="width">
+                            <div class="subtitle">Проверка /feed</div>
+
+                            <form class="form" id="feed">
+                                <div class="line">
+                                    <label for="access_token">Введите access_token</label>
+                                    <div class="field">
+                                        <textarea class="scroll" id="access_token" value="" placeholder="Вставьте JWT токен"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="submit flex">
+                                    <button type="button" class="submit_btn black" onclick="feed()">Отправить</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="data">
+                    <div class="result">
+                        <div class="subtitle">Результат запроса к API<span id="send_method"></span><span class="code" id="response_code"></span></div>
+                        <textarea class="response scroll" id="response" placeholder="Здесь будет выведен ответ сервера в json" readonly></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="/js/scripts.js"></script>
+</body>
+</html>

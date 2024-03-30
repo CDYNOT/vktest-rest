@@ -1,0 +1,5 @@
+.idea/
+www/task.loc/vendor/
+www/.composer/
+mysql/
+logs/

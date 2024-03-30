@@ -1,0 +1,16 @@
+{
+    "name": "cdynot/vktest-rest",
+    "type": "project",
+    "autoload": {
+        "files": [
+            "src/Utils/helpers.php"
+        ],
+        "psr-4": {
+            "Task\\": "src/"
+        }
+    },
+    "require": {
+        "ext-mysqli": "*",
+        "firebase/php-jwt": "^6.10"
+    }
+}
